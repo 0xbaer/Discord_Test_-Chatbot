@@ -8,6 +8,8 @@ from discord import Intents, Client, Message
 from discord import Webhook
 import aiohttp
 from responses import get_response
+# Web3 dependence
+from web3 import HTTPProvider
 
 
 load_dotenv()
@@ -29,6 +31,8 @@ client: Client = Client(intents=intents)
 #     async with aiohttp.ClientSession() as session:
 #         webhook = Webhook.from_url(WEBHOOK_URL, adapter=AsyncWebhookAdapter(session))
 #         await webhook.send(message_content)
+
+provider = HTTPProvider("https://eth-mainnet.rpc.grove.city/v1/44de60af")
 
 # Message Functionality
 async def send_message(message: Message, user_message: str) -> None:
