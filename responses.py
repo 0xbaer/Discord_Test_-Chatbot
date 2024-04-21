@@ -32,8 +32,8 @@ def get_response(user_input: str) -> str:
             first: 2,
             skip: 0,
             where: {
-              space_in: ["balancer.eth", "yam.eth"],
-              state: "closed"
+              space_in: ["uniswapgovernance.eth", "1inch.eth", "aave.eth", "ens.eth", "safe.eth", "shutterdao0x36.eth","arbitrumfoundation.eth", "dydxgov.eth","eulerdao.eth"],
+              state: "active"
             },
             orderBy: "created",
             orderDirection: desc
@@ -74,7 +74,7 @@ def get_response(user_input: str) -> str:
     else:
         return choice(['I dont understand...',
                        'What are u talking about',
-                       'Do you mind rephracing that?'])
+                       'Do you mind rephrasing that?'])
 
 
     def get_snapshot_proposals() -> str:
